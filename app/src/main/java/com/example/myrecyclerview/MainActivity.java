@@ -73,8 +73,8 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
-        rvLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL,false);
-//        rvLayoutManager = new GridLayoutManager(this, 2);
+//        rvLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL,false);
+        rvLayoutManager = new GridLayoutManager(this, 3);
         rvAdapter = new RvAdapter();
 
         recyclerView.setLayoutManager(rvLayoutManager);

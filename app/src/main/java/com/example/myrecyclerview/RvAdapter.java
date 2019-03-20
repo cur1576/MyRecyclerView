@@ -1,5 +1,6 @@
 package com.example.myrecyclerview;
 
+import android.graphics.Color;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -24,6 +25,8 @@ class RvAdapter extends RecyclerView.Adapter<RvAdapter.ViewHolder> {
 
         viewHolder.itemView.setOnClickListener((v)->{
             Log.d("aus dem ViewAdapter ", "onBindViewHolder: " + i + " was clicked");
+            viewHolder.isClicked = !viewHolder.isClicked;
+            v.setBackgroundColor(viewHolder.isClicked ? Color.CYAN:Color.WHITE);
         });
     }
 
@@ -35,6 +38,7 @@ class RvAdapter extends RecyclerView.Adapter<RvAdapter.ViewHolder> {
     public class ViewHolder extends RecyclerView.ViewHolder {
 
         TextView itemName, itemCity;
+        boolean isClicked;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
