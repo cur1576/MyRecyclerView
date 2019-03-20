@@ -24,7 +24,7 @@ class RvAdapter extends RecyclerView.Adapter<RvAdapter.ViewHolder> {
 
     @Override
     public int getItemCount() {
-        return 0;
+        return MainActivity.personArrayList.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
