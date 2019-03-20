@@ -12,6 +12,7 @@ import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+import android.widget.LinearLayout;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -31,6 +32,12 @@ public class MainActivity extends AppCompatActivity {
 
         personArrayList = new ArrayList<>();
         personArrayList.addAll(Arrays.asList(
+                new Person("Christian","Berlin"),
+                new Person("Frank", "Berlin"),
+                new Person("Ronny","Berlin"),
+                new Person("Sebastian", "Offenbach"),
+                new Person("Esin","Hamburg"),
+                new Person("Klaus", "Braunschweig"),
                 new Person("Christian","Berlin"),
                 new Person("Frank", "Berlin"),
                 new Person("Ronny","Berlin"),
@@ -66,8 +73,8 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
-//        rvLayoutManager = new LinearLayoutManager(this);
-        rvLayoutManager = new GridLayoutManager(this, 2);
+        rvLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL,false);
+//        rvLayoutManager = new GridLayoutManager(this, 2);
         rvAdapter = new RvAdapter();
 
         recyclerView.setLayoutManager(rvLayoutManager);
