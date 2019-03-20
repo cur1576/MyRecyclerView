@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
     RecyclerView.Adapter rvAdapter;
     RecyclerView.LayoutManager rvLayoutManager;
 
-    ArrayList<Person> personArrayList;
+    static ArrayList<Person> personArrayList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
