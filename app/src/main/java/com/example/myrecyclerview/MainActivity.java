@@ -2,6 +2,7 @@ package com.example.myrecyclerview;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
@@ -32,7 +33,8 @@ public class MainActivity extends AppCompatActivity {
         ));
 
         recyclerView = findViewById(R.id.recyclerView);
-        rvLayoutManager = new LinearLayoutManager(this);
+//        rvLayoutManager = new LinearLayoutManager(this);
+        rvLayoutManager = new GridLayoutManager(this, 2);
         rvAdapter = new RvAdapter();
 
         recyclerView.setLayoutManager(rvLayoutManager);
